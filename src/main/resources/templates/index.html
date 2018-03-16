@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport"
+	content="width=device-width, shrink-to-fit=no, initial-scale=1"></meta>
+<meta name="description" content=""></meta>
+<meta name="author" content=""></meta>
+<title>Currency Converter POC</title>
+<!-- Bootstrap Core CSS -->
+
+<link href="css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="css/simple-sidebar.css" rel="stylesheet"></link>
+<link href="fontawesome/font-awesome.min.css" rel="stylesheet"></link>
+<link href="css/custome_style.css" rel="stylesheet"></link>
+<link href="css/theme.css" rel="stylesheet"></link>
+<link href="css/dataTables.bootstrap.min.css" rel="stylesheet"></link>
+<link href="css/buttons.dataTables.min.css" rel="stylesheet"></link>
+<link href="css/jquery.dataTables.min.css" rel="stylesheet"></link>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.cookie.min.js"></script>
+<script src="js/toaster.js"></script>
+<script src="js/moment.js"></script>
+
+</head>
+<body>
+	<br />
+	<div id="home_wrapper" style="margin-top: -9%;">
+		<div id="page-content-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8"></div>
+					<div class="col-md-4" style="margin-top: 4%">
+						Welcome : <span name="currentUser" id="currentUser"> </span>
+						<button type="btn" class="btn btn-default" onclick="logout()">Logout</button>
+					</div>
+				</div>
+				<h2>Currency converter POC</h2>
+				<div id="imgLoaderDiv" align="center" style="display: none">
+					<img src='img/ajax-loader.gif' />
+				</div>
+				<div class="col-md-12">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="email">Amount:</label>
+							<div class="col-sm-6">
+								<input type="amount" class="form-control" id="amount"
+									placeholder="Enter amount" name="amount">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="from">From:</label>
+							<div class="col-sm-6">
+								<select class="form-control symbol" name="fromSymbolSelect"
+									onchange="convertCurrency()" id="fromSymbolSelect">
+								</select>
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="to">To:</label>
+							<div class="col-sm-6">
+								<select class="form-control toSymbol" name="toSymbolSelect"
+									onchange="convertCurrency()" id="toSymbolSelect">
+								</select>
+							</div>
+							<div class="col-sm-3">
+								<span id="actualLiveRate" name="actualLiveRate"> </span>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<div class="col-sm-6" style="margin-left: 16%;">
+									<input type="text" class="form-control" id="result"
+										placeholder="Result" disabled name="result">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12"></div>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-12">
+					<table id="history" class="table table-striped table-hover ">
+						<thead>
+							<tr>
+								<th scope="col" width="10%">From Symbol</th>
+								<th scope="col" width="10%">To Symbol</th>
+								<th scope="col" width="16%">Conversion Rate</th>
+								<th scope="col" width="10%">Actual Amount</th>
+								<th scope="col" width="10%">Converted Amount</th>
+								<th scope="col" width="10%">Creation Time</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
+	</div>
+	<footer class="fixed-footer"> </footer>
+	<!-- /#wrapper -->
+	<!-- jQuery -->
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.min.js"></script>
+	<script src="js/dashboard.js">
+</script>
+</body>
+</html>
