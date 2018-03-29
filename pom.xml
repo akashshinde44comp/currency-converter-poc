@@ -5,7 +5,7 @@
 	<groupId>currency-converter-poc</groupId>
 	<artifactId>currency-converter-poc</artifactId>
 	<version>ui</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>currency-converter-poc</name>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
